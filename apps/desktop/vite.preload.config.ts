@@ -6,7 +6,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         format: 'cjs',
-        entryFileNames: '[name].cjs',
+        // 为 preload 脚本使用特定的文件名，避免与 main 的 index.cjs 冲突
+        entryFileNames: 'preload.cjs',
       },
     },
   },

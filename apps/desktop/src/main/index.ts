@@ -13,14 +13,16 @@ const createWindow = () => {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js'),
+            preload: path.join(__dirname, 'preload.cjs'),
         },
     });
 
     // and load the index.html of the app.
     if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
+        // 开发模式：直接加载 Vite 开发服务器
         mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
     } else {
+        // 生产模式：加载构建后的 HTML 文件
         mainWindow.loadFile(
             path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
         );

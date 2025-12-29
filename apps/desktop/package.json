@@ -26,7 +26,9 @@
   "devDependencies": {
     "@craft-studio/eslint-config": "workspace:*",
     "@craft-studio/prettier-config": "workspace:*",
+    "@craft-studio/shared": "workspace:*",
     "@craft-studio/typescript-config": "workspace:*",
+    "@craft-studio/ui": "workspace:*",
     "@electron-forge/cli": "^7.10.2",
     "@electron-forge/maker-deb": "^7.10.2",
     "@electron-forge/maker-rpm": "^7.10.2",
@@ -44,6 +46,13 @@
     "vite": "^7.3.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "@tailwindcss/vite": "^4.1.18",
+    "@vitejs/plugin-react": "^5.1.2",
+    "electron-squirrel-startup": "^1.0.1",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.11.0",
+    "tailwindcss": "^4.1.18"
   }
 }

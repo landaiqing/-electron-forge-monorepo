@@ -1,2 +1,7 @@
-// React App 根组件
+import Router from './router/Router';
 
+function App(): React.JSX.Element {
+  return <Router />;
+}
+
+export default App;

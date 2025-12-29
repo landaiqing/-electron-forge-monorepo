@@ -1,14 +1,17 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Craft Studio</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    />
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
 

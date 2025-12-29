@@ -1,0 +1,15 @@
+{
+  "extends": "@craft-studio/typescript-config/node",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "lib": ["ESNext"],
+    "types": ["node"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+
