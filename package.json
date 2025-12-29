@@ -1,0 +1,29 @@
+{
+  "name": "@craft-studio/root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Craft Studio Monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter @craft-studio/desktop dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "clean": "turbo run clean && rimraf node_modules .turbo"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "turbo": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "author": {
+    "name": "landaiqing",
+    "email": "landaiqing@126.com"
+  },
+  "license": "MIT"
+}

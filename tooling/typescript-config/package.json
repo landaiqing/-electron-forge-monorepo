@@ -1,0 +1,11 @@
+{
+  "name": "@craft-studio/typescript-config",
+  "version": "1.0.0",
+  "description": "TypeScript shared configuration",
+  "main": "base.json",
+  "exports": {
+    "./base": "./base.json",
+    "./node": "./node.json",
+    "./react": "./react.json"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "@craft-studio/typescript-config/react",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"]
+}

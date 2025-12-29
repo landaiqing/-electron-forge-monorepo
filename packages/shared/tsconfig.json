@@ -1,0 +1,7 @@
+{
+  "extends": "@craft-studio/typescript-config/node",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["types/**/*", "constants/**/*"]
+}

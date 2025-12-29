@@ -1,0 +1,34 @@
+{
+  "name": "@craft-studio/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint 9.x shared configuration with Prettier",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./base": "./base.js",
+    "./typescript": "./typescript.js",
+    "./react": "./react.js",
+    "./node": "./node.js"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@eslint/css": "^0.14.1",
+    "@eslint/js": "^9.39.2",
+    "@eslint/markdown": "^7.5.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.5.0",
+    "prettier": "^3.4.2",
+    "typescript-eslint": "^8.50.1"
+  },
+  "devDependencies": {
+    "jiti": "^2.6.1"
+  }
+}

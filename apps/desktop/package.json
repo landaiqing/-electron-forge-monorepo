@@ -1,0 +1,50 @@
+{
+  "name": "@craft-studio/desktop",
+  "productName": "Craft Studio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Craft Studio Desktop Application",
+  "main": ".vite/build/index.cjs",
+  "scripts": {
+    "dev": "electron-forge start",
+    "build": "electron-forge package",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "clean": "rimraf .vite out dist node_modules",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "type-check": "pnpm exec tsc --noEmit"
+  },
+  "keywords": [],
+  "author": {
+    "name": "landaiqing",
+    "email": "landaiqing@dcx.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@craft-studio/eslint-config": "workspace:*",
+    "@craft-studio/prettier-config": "workspace:*",
+    "@craft-studio/typescript-config": "workspace:*",
+    "@electron-forge/cli": "^7.10.2",
+    "@electron-forge/maker-deb": "^7.10.2",
+    "@electron-forge/maker-rpm": "^7.10.2",
+    "@electron-forge/maker-squirrel": "^7.10.2",
+    "@electron-forge/maker-zip": "^7.10.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.10.2",
+    "@electron-forge/plugin-fuses": "^7.10.2",
+    "@electron-forge/plugin-vite": "^7.10.2",
+    "@electron/fuses": "^1.8.0",
+    "@types/electron-squirrel-startup": "^1.0.2",
+    "electron": "39.2.7",
+    "eslint": "^9.39.2",
+    "prettier": "^3.4.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.4.21"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
+
