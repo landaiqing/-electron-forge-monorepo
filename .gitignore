@@ -36,6 +36,7 @@ build/Release
 node_modules/
 jspm_packages/
 **/node_modules/
+**/dist/
 
 # TypeScript v1 declaration files
 typings/
@@ -91,6 +92,14 @@ typings/
 
 # Electron-Forge
 out/
+**/out/
 
+# IDEA
 .idea
 
+# Cursor IDE
+.specstory
+.cursorindexingignore
+
+# Turbo js
+**/.turbo/
