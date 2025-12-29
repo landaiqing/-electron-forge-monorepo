@@ -4,8 +4,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@craft-studio/ui": ["./src"],
-      "@craft-studio/ui/*": ["./src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src/**/*"]

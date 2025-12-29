@@ -9,9 +9,7 @@
     "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@craft-studio/ui": ["../../packages/ui/src"],
-      "@craft-studio/ui/*": ["../../packages/ui/src/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src/**/*"],

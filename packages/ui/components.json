@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@craft-studio/ui/components",
-    "utils": "@craft-studio/ui/lib/utils",
-    "hooks": "@craft-studio/ui/hooks",
-    "lib": "@craft-studio/ui/lib",
-    "ui": "@craft-studio/ui/components"
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "hooks": "@/hooks",
+    "lib": "@/lib",
+    "ui": "@/components"
   }
 }
