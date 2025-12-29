@@ -1,0 +1,6 @@
+@utility drag {
+    -webkit-app-region: drag;
+}
+@utility no-drag {
+    -webkit-app-region: no-drag;
+}
