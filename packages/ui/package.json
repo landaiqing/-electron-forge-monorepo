@@ -17,10 +17,8 @@
     "@craft-studio/eslint-config": "workspace:*",
     "@craft-studio/prettier-config": "workspace:*",
     "@craft-studio/typescript-config": "workspace:*",
-    "eslint": "^9.39.2",
-    "prettier": "^3.7.4",
-    "react": "^19.2.3",
-    "typescript": "^5.9.3"
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.3"
   },
   "dependencies": {
     "@types/react": "^19.2.7",

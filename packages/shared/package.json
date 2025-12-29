@@ -20,9 +20,6 @@
   "devDependencies": {
     "@craft-studio/eslint-config": "workspace:*",
     "@craft-studio/prettier-config": "workspace:*",
-    "@craft-studio/typescript-config": "workspace:*",
-    "eslint": "^9.39.2",
-    "prettier": "^3.7.4",
-    "typescript": "^5.9.3"
+    "@craft-studio/typescript-config": "workspace:*"
   }
 }
