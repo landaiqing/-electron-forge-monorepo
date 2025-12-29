@@ -20,7 +20,7 @@
   "keywords": [],
   "author": {
     "name": "landaiqing",
-    "email": "landaiqing@dcx.com"
+    "email": "landaiqing@126.com"
   },
   "license": "MIT",
   "devDependencies": {
@@ -39,12 +39,11 @@
     "@types/electron-squirrel-startup": "^1.0.2",
     "electron": "39.2.7",
     "eslint": "^9.39.2",
-    "prettier": "^3.4.2",
-    "typescript": "^5.3.3",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3",
     "vite": "^5.4.21"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
   }
 }
-
