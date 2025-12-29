@@ -7,7 +7,12 @@
     "types": ["vite/client", "node"],
     "allowJs": true,
     "noImplicitAny": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@craft-studio/ui": ["../../packages/ui/src"],
+      "@craft-studio/ui/*": ["../../packages/ui/src/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", ".vite"]

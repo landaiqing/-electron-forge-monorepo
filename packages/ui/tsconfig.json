@@ -1,7 +1,12 @@
 {
   "extends": "@craft-studio/typescript-config/react",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@craft-studio/ui": ["./src"],
+      "@craft-studio/ui/*": ["./src/*"]
+    }
   },
   "include": ["src/**/*"]
 }
