@@ -1,2 +1,11 @@
-@import "@craft-studio/ui/src/styles/index.css";
+@import '@craft-studio/ui/src/styles/index.css';
 @source "../../../../../../packages/ui/src/**/*.{js,ts,jsx,tsx}";
+
+/* 确保应用占满整个窗口 */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

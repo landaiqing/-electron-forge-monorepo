@@ -1,2 +1,1 @@
-// State management
-
+export * from './useThemeStore';

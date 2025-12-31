@@ -7,10 +7,8 @@
     "types": ["vite/client", "node"],
     "allowJs": true,
     "noImplicitAny": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "resolveJsonModule": true,
+    "baseUrl": "."
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", ".vite"]

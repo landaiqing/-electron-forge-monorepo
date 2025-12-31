@@ -1,0 +1,15 @@
+export default {
+  confirm: '确认',
+  cancel: '取消',
+  save: '保存',
+  delete: '删除',
+  edit: '编辑',
+  add: '添加',
+  remove: '移除',
+  search: '搜索',
+  filter: '筛选',
+  loading: '加载中...',
+  success: '成功',
+  error: '错误',
+  warning: '警告',
+} as const;

@@ -2,6 +2,9 @@
   "name": "@craft-studio/prettier-config",
   "version": "1.0.0",
   "description": "Prettier shared configuration",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  }
 }
 

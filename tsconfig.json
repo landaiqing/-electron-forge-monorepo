@@ -1,9 +1,23 @@
 {
   "files": [],
   "references": [
-    { "path": "./apps/desktop" },
-    { "path": "./packages/shared" },
-    { "path": "./packages/utils" },
-    { "path": "./packages/ui" }
+    {
+      "path": "./apps/desktop"
+    },
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/utils"
+    },
+    {
+      "path": "./packages/ui"
+    },
+    {
+      "path": "./packages/logger"
+    },
+    {
+      "path": "./packages/electron-events"
+    }
   ]
 }

@@ -11,6 +11,6 @@
 
 ```typescript
 import { IPCChannels } from '@craft-studio/shared/types';
-import { APP_NAME } from '@craft-studio/shared/constants';
+import { APP_NAME } from '@craft-studio/shared/config';
 ```
 

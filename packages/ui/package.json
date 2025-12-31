@@ -22,7 +22,8 @@
   },
   "peerDependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.18"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

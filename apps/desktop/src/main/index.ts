@@ -1,58 +1,46 @@
-import {app, BrowserWindow} from 'electron';
-import path from 'node:path';
-import started from 'electron-squirrel-startup';
+import { electronApp, optimizer } from '@electron-toolkit/utils';
+import { app, BrowserWindow } from 'electron';
+import { useEvents } from '@craft-studio/electron-events/main';
+import { Windows } from '@craft-studio/shared/events';
+import { LoggerService, loggerService } from '@craft-studio/logger/main';
 
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (started) {
-    app.quit();
-}
+import { windowService } from './services/WindowService';
+import { setupEventHandlers } from './events';
 
-const createWindow = () => {
-    // Create the browser window.
-    const mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-            preload: path.join(__dirname, 'preload.cjs'),
-        },
-    });
+// 初始化事件系统
+const events = useEvents();
 
-    // and load the index.html of the app.
-    if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
-        // 开发模式：直接加载 Vite 开发服务器
-        mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
-    } else {
-        // 生产模式：加载构建后的 HTML 文件
-        mainWindow.loadFile(
-            path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
-        );
-    }
+// 初始化日志服务并注册 IPC 处理器（接收渲染进程日志）
+loggerService.setupEvents(events);
 
-    // Open the DevTools.
-    mainWindow.webContents.openDevTools();
-};
+// 创建带上下文的logger用于主进程日志
+const logger = LoggerService.getInstance(events).withContext('MainProcess', { process: 'main' });
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+// 注册所有事件处理器
+setupEventHandlers(events);
 
-// Quit when all windows are closed, except on macOS. There, it's common
-// for applications and their menu bar to stay active until the user quits
-// explicitly with Cmd + Q.
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit();
-    }
-});
+app.whenReady().then(() => {
+  electronApp.setAppUserModelId('com.electron');
 
-app.on('activate', () => {
-    // On OS X it's common to re-create a window in the app when the
-    // dock icon is clicked and there are no other windows open.
+  app.on('browser-window-created', (_, window) => {
+    optimizer.watchWindowShortcuts(window);
+  });
+
+  // 创建主窗口
+  const mainWindow = windowService.createMainWindow();
+
+  // 将窗口注册到事件系统
+  events.addWindow(Windows.MAIN, mainWindow);
+
+  app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) {
-        createWindow();
+      windowService.createMainWindow();
     }
+  });
 });
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
+});
